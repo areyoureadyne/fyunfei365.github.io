@@ -62,6 +62,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-java为啥不支持多重继承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/25/java为啥不支持多重继承/" class="article-date">
+  <time datetime="2019-05-25T13:03:57.000Z" itemprop="datePublished">2019-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/25/java为啥不支持多重继承/">我的第一篇博客文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>哈哈<br>首先我们需要搞清楚，Java本身是不支持多重继承的，那么有人就会问，Java可以实现多个接口不就是支持多重继承吗？实际上稍微懂一些Java语法就知道，接口跟继承具有本质的不同。</p>
+<p>接口对类来说，实际上是给类赋予了更多的灵活性，一个类可以实现多个接口，从语法层面来看就是给这个类添加一些属性和行为，这跟继承是从父类中获取属性和行为是完全不同的。</p>
+<p>为什么不支持多重继承<br>简单来说当然是因为Java的作者的决定了，但是作者在决定这么做的时候，肯定也不是一拍脑门就决定Java这门语言就得去掉多重继承，Java之父们肯定也是经过各种权衡考虑之后才做此决定。而我们分享一下James Gosling对于Java的定义。</p>
+<p>Java: 一种简单的，面向对象的，分布式的，解释型的（译者注：Java既不是纯解释型也不是纯编译型的语言），健壮的，安全的，架构中立的，可移植的，高性能的，支持多线程的，动态语言。</p>
+<p>看看定义的美妙之处吧。现代程序语言应该有这样的特性。我们看到，定义第一个特性是什么？是简单。</p>
+<p>Java在设计之初确实为了语言上的简单做了不少功夫，比如去掉了指针，GC的存在避免了需要手动清理内存等等问题。</p>
+<p>为了强化简单这个特点，这也就是去除多重继承的原因。下面来看个例子，即菱形问题，又叫钻石问题。</p>
+<p>什么是菱形问题？</p>
+<p>就是如上图所示，如果B和C都继承自A，并且同时都覆盖掉A中的某个方法，然后D又继承自B和C，那么在D中调用这个方法的时候，就无法判断调用的是B中的实现还是C中的实现。这种继承关系是一种菱形，所以就叫做菱形问题。</p>
+<p>如果Java要解决这种问题，那么就需要去引入更复杂的机制，这和作者的初衷（Java is a simple language ）是背道而驰的。C++就经常会掉入这种陷阱，所以为了避免这种问题，Java之父们就决定去掉多重继承，并设计了接口这种概念来折中处理一个类需要多种实现方式的方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/25/java为啥不支持多重继承/" data-id="cjw3ciglo0001mouoj9zi6ala" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/24/我的第一篇博客文章/" class="article-date">
@@ -89,53 +135,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/24/我的第一篇博客文章/" data-id="cjw3c89zk0001wcuoo9gk55qf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-java为啥不支持多重继承" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/24/java为啥不支持多重继承/" class="article-date">
-  <time datetime="2019-05-24T13:03:57.000Z" itemprop="datePublished">2019-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/24/java为啥不支持多重继承/">我的第一篇博客文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>哈哈<br>首先我们需要搞清楚，Java本身是不支持多重继承的，那么有人就会问，Java可以实现多个接口不就是支持多重继承吗？实际上稍微懂一些Java语法就知道，接口跟继承具有本质的不同。</p>
-<p>接口对类来说，实际上是给类赋予了更多的灵活性，一个类可以实现多个接口，从语法层面来看就是给这个类添加一些属性和行为，这跟继承是从父类中获取属性和行为是完全不同的。</p>
-<p>为什么不支持多重继承<br>简单来说当然是因为Java的作者的决定了，但是作者在决定这么做的时候，肯定也不是一拍脑门就决定Java这门语言就得去掉多重继承，Java之父们肯定也是经过各种权衡考虑之后才做此决定。而我们分享一下James Gosling对于Java的定义。</p>
-<p>Java: 一种简单的，面向对象的，分布式的，解释型的（译者注：Java既不是纯解释型也不是纯编译型的语言），健壮的，安全的，架构中立的，可移植的，高性能的，支持多线程的，动态语言。</p>
-<p>看看定义的美妙之处吧。现代程序语言应该有这样的特性。我们看到，定义第一个特性是什么？是简单。</p>
-<p>Java在设计之初确实为了语言上的简单做了不少功夫，比如去掉了指针，GC的存在避免了需要手动清理内存等等问题。</p>
-<p>为了强化简单这个特点，这也就是去除多重继承的原因。下面来看个例子，即菱形问题，又叫钻石问题。</p>
-<p>什么是菱形问题？</p>
-<p>就是如上图所示，如果B和C都继承自A，并且同时都覆盖掉A中的某个方法，然后D又继承自B和C，那么在D中调用这个方法的时候，就无法判断调用的是B中的实现还是C中的实现。这种继承关系是一种菱形，所以就叫做菱形问题。</p>
-<p>如果Java要解决这种问题，那么就需要去引入更复杂的机制，这和作者的初衷（Java is a simple language ）是背道而驰的。C++就经常会掉入这种陷阱，所以为了避免这种问题，Java之父们就决定去掉多重继承，并设计了接口这种概念来折中处理一个类需要多种实现方式的方法。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/24/java为啥不支持多重继承/" data-id="cjw3c89zo0002wcuodb926n15" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/24/我的第一篇博客文章/" data-id="cjw3cigls0002mouom7zo7111" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/24/hello-world/" data-id="cjw3c89zc0000wcuolm2f328p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/24/hello-world/" data-id="cjw3ciglg0000mouoas1jv161" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,11 +220,11 @@
       <ul>
         
           <li>
-            <a href="/2019/05/24/我的第一篇博客文章/">我的第一篇博客文章</a>
+            <a href="/2019/05/25/java为啥不支持多重继承/">我的第一篇博客文章</a>
           </li>
         
           <li>
-            <a href="/2019/05/24/java为啥不支持多重继承/">我的第一篇博客文章</a>
+            <a href="/2019/05/24/我的第一篇博客文章/">我的第一篇博客文章</a>
           </li>
         
           <li>
